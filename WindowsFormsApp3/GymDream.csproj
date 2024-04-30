@@ -46,7 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autorisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autorisation.Designer.cs">
+      <DependentUpon>Autorisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutorisationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutorisationForm.Designer.cs">
+      <DependentUpon>AutorisationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +85,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Autorisation.resx">
+      <DependentUpon>Autorisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutorisationForm.resx">
+      <DependentUpon>AutorisationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

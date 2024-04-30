@@ -60,6 +60,7 @@
             this.ClientButton.TabIndex = 12;
             this.ClientButton.Text = "Клиенты";
             this.ClientButton.UseVisualStyleBackColor = true;
+            this.ClientButton.Click += new System.EventHandler(this.ClientButton_Click);
             // 
             // PostButton
             // 
@@ -90,7 +91,8 @@
             this.Controls.Add(this.UserButton);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Main";
             this.ResumeLayout(false);
 
         }

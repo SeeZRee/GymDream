@@ -19,21 +19,21 @@ namespace WindowsFormsApp3
             db = new DB();
         }
 
-        private void ButtonAdd_Click(object sender, EventArgs e)
+        private void ButtonAddUser_Click(object sender, EventArgs e)
         {
-            var queryAddLogin = $"insert into [dbo].[User] (Login) values ('{TextBoxLogin.Text}') ";
+            var queryAddLogin = $"insert into [dbo].[User] (Login) values ('{TextBoxLoginUser.Text}') ";
             db.Execute(queryAddLogin);
         }
 
-        private void ButtonDelete_Click(object sender, EventArgs e)
+        private void ButtonDeleteUser_Click(object sender, EventArgs e)
         {
-            var queryAddLogin = $"delete [dbo].[User] where Id_User = {TextBoxDelete.Text}";
+            var queryAddLogin = $"delete [dbo].[User] where Id_User = {TextBoxDeleteUser.Text}";
             db.Execute(queryAddLogin);
         }
 
-        private void ButtonEdit_Click(object sender, EventArgs e)
+        private void ButtonEditUser_Click(object sender, EventArgs e)
         {
-            var queryAddLogin = $"update [dbo].[User] set Login = '{TextBoxEditLog.Text}' where Id_User = {TextBoxEditId.Text}";
+            var queryAddLogin = $"update [dbo].[User] set Login = '{TextBoxEditLogUser.Text}' where Id_User = {TextBoxEditIdUser.Text}";
             db.Execute(queryAddLogin);
         }
     }

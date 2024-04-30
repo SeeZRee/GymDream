@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxLogin = new System.Windows.Forms.TextBox();
-            this.TextBoxEditId = new System.Windows.Forms.TextBox();
+            this.TextBoxLoginUser = new System.Windows.Forms.TextBox();
+            this.TextBoxEditIdUser = new System.Windows.Forms.TextBox();
             this.ButtonAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ButtonEdit = new System.Windows.Forms.Button();
-            this.TextBoxEditLog = new System.Windows.Forms.TextBox();
-            this.TextBoxPassword = new System.Windows.Forms.TextBox();
-            this.TextBoxDelete = new System.Windows.Forms.TextBox();
+            this.TextBoxEditLogUser = new System.Windows.Forms.TextBox();
+            this.TextBoxPasswordUser = new System.Windows.Forms.TextBox();
+            this.TextBoxDeleteUser = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TextBoxLogin
+            // TextBoxLoginUser
             // 
-            this.TextBoxLogin.Location = new System.Drawing.Point(73, 49);
-            this.TextBoxLogin.Name = "TextBoxLogin";
-            this.TextBoxLogin.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxLogin.TabIndex = 14;
+            this.TextBoxLoginUser.Location = new System.Drawing.Point(73, 49);
+            this.TextBoxLoginUser.Name = "TextBoxLoginUser";
+            this.TextBoxLoginUser.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxLoginUser.TabIndex = 14;
             // 
-            // TextBoxEditId
+            // TextBoxEditIdUser
             // 
-            this.TextBoxEditId.Location = new System.Drawing.Point(419, 102);
-            this.TextBoxEditId.Name = "TextBoxEditId";
-            this.TextBoxEditId.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxEditId.TabIndex = 19;
+            this.TextBoxEditIdUser.Location = new System.Drawing.Point(419, 102);
+            this.TextBoxEditIdUser.Name = "TextBoxEditIdUser";
+            this.TextBoxEditIdUser.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxEditIdUser.TabIndex = 19;
             // 
             // ButtonAdd
             // 
@@ -66,7 +66,7 @@
             this.ButtonAdd.TabIndex = 10;
             this.ButtonAdd.Text = "Добавить";
             this.ButtonAdd.UseVisualStyleBackColor = false;
-            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAddUser_Click);
             // 
             // label2
             // 
@@ -86,7 +86,7 @@
             this.ButtonDelete.TabIndex = 11;
             this.ButtonDelete.Text = "Удалить";
             this.ButtonDelete.UseVisualStyleBackColor = false;
-            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDeleteUser_Click);
             // 
             // label1
             // 
@@ -95,7 +95,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Логин";
+            this.label1.Text = "Логин\r\n";
             // 
             // ButtonEdit
             // 
@@ -106,28 +106,28 @@
             this.ButtonEdit.TabIndex = 12;
             this.ButtonEdit.Text = "Изменить";
             this.ButtonEdit.UseVisualStyleBackColor = false;
-            this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
+            this.ButtonEdit.Click += new System.EventHandler(this.ButtonEditUser_Click);
             // 
-            // TextBoxEditLog
+            // TextBoxEditLogUser
             // 
-            this.TextBoxEditLog.Location = new System.Drawing.Point(419, 49);
-            this.TextBoxEditLog.Name = "TextBoxEditLog";
-            this.TextBoxEditLog.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxEditLog.TabIndex = 16;
+            this.TextBoxEditLogUser.Location = new System.Drawing.Point(419, 49);
+            this.TextBoxEditLogUser.Name = "TextBoxEditLogUser";
+            this.TextBoxEditLogUser.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxEditLogUser.TabIndex = 16;
             // 
-            // TextBoxPassword
+            // TextBoxPasswordUser
             // 
-            this.TextBoxPassword.Location = new System.Drawing.Point(73, 102);
-            this.TextBoxPassword.Name = "TextBoxPassword";
-            this.TextBoxPassword.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxPassword.TabIndex = 13;
+            this.TextBoxPasswordUser.Location = new System.Drawing.Point(73, 102);
+            this.TextBoxPasswordUser.Name = "TextBoxPasswordUser";
+            this.TextBoxPasswordUser.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxPasswordUser.TabIndex = 13;
             // 
-            // TextBoxDelete
+            // TextBoxDeleteUser
             // 
-            this.TextBoxDelete.Location = new System.Drawing.Point(250, 102);
-            this.TextBoxDelete.Name = "TextBoxDelete";
-            this.TextBoxDelete.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxDelete.TabIndex = 15;
+            this.TextBoxDeleteUser.Location = new System.Drawing.Point(250, 102);
+            this.TextBoxDeleteUser.Name = "TextBoxDeleteUser";
+            this.TextBoxDeleteUser.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxDeleteUser.TabIndex = 15;
             // 
             // label3
             // 
@@ -164,20 +164,21 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TextBoxLogin);
-            this.Controls.Add(this.TextBoxEditId);
+            this.Controls.Add(this.TextBoxLoginUser);
+            this.Controls.Add(this.TextBoxEditIdUser);
             this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ButtonDelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonEdit);
-            this.Controls.Add(this.TextBoxEditLog);
-            this.Controls.Add(this.TextBoxPassword);
-            this.Controls.Add(this.TextBoxDelete);
+            this.Controls.Add(this.TextBoxEditLogUser);
+            this.Controls.Add(this.TextBoxPasswordUser);
+            this.Controls.Add(this.TextBoxDeleteUser);
             this.MaximumSize = new System.Drawing.Size(628, 426);
             this.MinimumSize = new System.Drawing.Size(628, 426);
             this.Name = "UserForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "UserForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,16 +186,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBoxLogin;
-        private System.Windows.Forms.TextBox TextBoxEditId;
+        private System.Windows.Forms.TextBox TextBoxLoginUser;
+        private System.Windows.Forms.TextBox TextBoxEditIdUser;
         private System.Windows.Forms.Button ButtonAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ButtonEdit;
-        private System.Windows.Forms.TextBox TextBoxEditLog;
-        private System.Windows.Forms.TextBox TextBoxPassword;
-        private System.Windows.Forms.TextBox TextBoxDelete;
+        private System.Windows.Forms.TextBox TextBoxEditLogUser;
+        private System.Windows.Forms.TextBox TextBoxPasswordUser;
+        private System.Windows.Forms.TextBox TextBoxDeleteUser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Main : Form
+    public partial class Autorisation : Form
     {
-        public Main()
+        public Autorisation()
         {
             InitializeComponent();
         }
         private Form acriveForm = null;
-        private void openForm(Form childForm)
+        private void OpenForm(Form childForm)
         {
             if (acriveForm != null)
                 acriveForm.Close();
@@ -25,20 +26,31 @@ namespace WindowsFormsApp3
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel1.Controls.Add(childForm);
-            panel1.Tag = childForm;
+            GroupBoxAutorisation.Controls.Add(childForm);
+            GroupBoxAutorisation.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private void UserButton_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            openForm(new UserForm());
+            OpenForm(new RegistrationForm());
         }
 
-        private void ClientButton_Click(object sender, EventArgs e)
+        private void Autorisation_Load(object sender, EventArgs e)
         {
-            openForm(new ClientForm());
+            OpenForm(new AutorisationForm());
+            
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenForm(new AutorisationForm());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
