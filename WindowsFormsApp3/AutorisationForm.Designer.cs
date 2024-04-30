@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AutorisationButton = new System.Windows.Forms.Button();
+            this.PassAutoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LogAutoTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // button3
+            // AutorisationButton
             // 
-            this.button3.Location = new System.Drawing.Point(58, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 30);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Войти";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.AutorisationButton.Location = new System.Drawing.Point(58, 134);
+            this.AutorisationButton.Name = "AutorisationButton";
+            this.AutorisationButton.Size = new System.Drawing.Size(120, 30);
+            this.AutorisationButton.TabIndex = 9;
+            this.AutorisationButton.Text = "Войти";
+            this.AutorisationButton.UseVisualStyleBackColor = true;
+            this.AutorisationButton.Click += new System.EventHandler(this.AutorisationButton_Click);
             // 
-            // textBox2
+            // PassAutoTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(58, 60);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 20);
-            this.textBox2.TabIndex = 8;
+            this.PassAutoTextBox.Location = new System.Drawing.Point(58, 60);
+            this.PassAutoTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.PassAutoTextBox.Name = "PassAutoTextBox";
+            this.PassAutoTextBox.Size = new System.Drawing.Size(120, 20);
+            this.PassAutoTextBox.TabIndex = 8;
             // 
             // label2
             // 
@@ -64,13 +64,13 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Пароль";
             // 
-            // textBox1
+            // LogAutoTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 6;
+            this.LogAutoTextBox.Location = new System.Drawing.Point(58, 16);
+            this.LogAutoTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.LogAutoTextBox.Name = "LogAutoTextBox";
+            this.LogAutoTextBox.Size = new System.Drawing.Size(120, 20);
+            this.LogAutoTextBox.TabIndex = 6;
             // 
             // label1
             // 
@@ -85,12 +85,15 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(58, 88);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(114, 17);
             this.checkBox1.TabIndex = 10;
             this.checkBox1.Text = "Показать пароль";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // AutorisationForm
             // 
@@ -98,10 +101,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(230, 172);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.AutorisationButton);
+            this.Controls.Add(this.PassAutoTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LogAutoTextBox);
             this.Controls.Add(this.label1);
             this.Name = "AutorisationForm";
             this.Text = "AutorisationForm";
@@ -112,10 +115,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button AutorisationButton;
+        private System.Windows.Forms.TextBox PassAutoTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LogAutoTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
     }
