@@ -41,7 +41,7 @@ namespace WindowsFormsApp3
                     MessageBox.Show("Неверный логин или пароль.", "Ошибка");
                 }
             }
-            /*private*/ bool AuthorizeUser(string login, string password)
+            bool AuthorizeUser(string login, string password)
             {
                 bool isAuthorized = false;
 
@@ -67,21 +67,23 @@ namespace WindowsFormsApp3
                 }
                 return isAuthorized;
             }
-            /*private void label2_Click(object sender, EventArgs e)
-            {
-                Main main = new Main();
-                main.Show();
-                this.Hide();
-            }*/
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
-                PassAutoTextBox.UseSystemPasswordChar = true;
-            else
+            {
                 PassAutoTextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                PassAutoTextBox.UseSystemPasswordChar = true;
+            }
+        }
 
+        private void AutorisationForm_Load(object sender, EventArgs e)
+        {
+            PassAutoTextBox.UseSystemPasswordChar = true;
         }
     }
 }

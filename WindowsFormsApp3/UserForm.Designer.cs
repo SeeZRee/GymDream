@@ -41,6 +41,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxLoginUser
@@ -156,11 +163,67 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Id Пользователя";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_User,
+            this.Login,
+            this.Password,
+            this.Id_Post,
+            this.Id_Client});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 211);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(588, 164);
+            this.dataGridView1.TabIndex = 23;
+            // 
+            // Id_User
+            // 
+            this.Id_User.DataPropertyName = "Id_User";
+            this.Id_User.HeaderText = "Id_User";
+            this.Id_User.Name = "Id_User";
+            this.Id_User.ReadOnly = true;
+            this.Id_User.Visible = false;
+            // 
+            // Login
+            // 
+            this.Login.DataPropertyName = "Login";
+            this.Login.HeaderText = "Логин";
+            this.Login.Name = "Login";
+            this.Login.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Пароль";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            // 
+            // Id_Post
+            // 
+            this.Id_Post.DataPropertyName = "Id_Post";
+            this.Id_Post.HeaderText = "Должность";
+            this.Id_Post.Name = "Id_Post";
+            this.Id_Post.ReadOnly = true;
+            // 
+            // Id_Client
+            // 
+            this.Id_Client.DataPropertyName = "Id_Client";
+            this.Id_Client.HeaderText = "Клиент";
+            this.Id_Client.Name = "Id_Client";
+            this.Id_Client.ReadOnly = true;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 387);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -179,6 +242,8 @@
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +264,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Login;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Post;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Client;
     }
 }
