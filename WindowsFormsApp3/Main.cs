@@ -40,5 +40,15 @@ namespace WindowsFormsApp3
         {
             openForm(new ClientForm());
         }
+
+        private void AbonementButton_Click(object sender, EventArgs e)
+        {
+            openForm(new AbonementForm());
+        }
+
+        private void TrainerButton_Click(object sender, EventArgs e)
+        {
+            openForm(new TrainerForm());
+        }
     }
 }

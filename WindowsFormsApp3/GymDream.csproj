@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbonementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbonementForm.Designer.cs">
+      <DependentUpon>AbonementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Autorisation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainerForm.Designer.cs">
+      <DependentUpon>TrainerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AbonementForm.resx">
+      <DependentUpon>AbonementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autorisation.resx">
       <DependentUpon>Autorisation.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerForm.resx">
+      <DependentUpon>TrainerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>

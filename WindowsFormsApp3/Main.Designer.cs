@@ -33,13 +33,17 @@
             this.ClientButton = new System.Windows.Forms.Button();
             this.PostButton = new System.Windows.Forms.Button();
             this.AbonementButton = new System.Windows.Forms.Button();
+            this.TrainerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(160, 12);
+            this.panel1.Location = new System.Drawing.Point(158, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.panel1.MaximumSize = new System.Drawing.Size(776, 521);
+            this.panel1.MinimumSize = new System.Drawing.Size(776, 521);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 426);
+            this.panel1.Size = new System.Drawing.Size(776, 521);
             this.panel1.TabIndex = 10;
             // 
             // UserButton
@@ -79,17 +83,31 @@
             this.AbonementButton.TabIndex = 14;
             this.AbonementButton.Text = "Абонементы";
             this.AbonementButton.UseVisualStyleBackColor = true;
+            this.AbonementButton.Click += new System.EventHandler(this.AbonementButton_Click);
+            // 
+            // TrainerButton
+            // 
+            this.TrainerButton.Location = new System.Drawing.Point(13, 259);
+            this.TrainerButton.Name = "TrainerButton";
+            this.TrainerButton.Size = new System.Drawing.Size(141, 38);
+            this.TrainerButton.TabIndex = 15;
+            this.TrainerButton.Text = "Тренера";
+            this.TrainerButton.UseVisualStyleBackColor = true;
+            this.TrainerButton.Click += new System.EventHandler(this.TrainerButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(944, 541);
+            this.Controls.Add(this.TrainerButton);
             this.Controls.Add(this.AbonementButton);
             this.Controls.Add(this.PostButton);
             this.Controls.Add(this.ClientButton);
             this.Controls.Add(this.UserButton);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(960, 580);
+            this.MinimumSize = new System.Drawing.Size(960, 580);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -103,6 +121,7 @@
         private System.Windows.Forms.Button ClientButton;
         private System.Windows.Forms.Button PostButton;
         private System.Windows.Forms.Button AbonementButton;
+        private System.Windows.Forms.Button TrainerButton;
     }
 }
 
