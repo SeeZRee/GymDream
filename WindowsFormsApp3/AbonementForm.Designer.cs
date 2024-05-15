@@ -115,7 +115,7 @@
             // ButtonAddAbonement
             // 
             this.ButtonAddAbonement.BackColor = System.Drawing.Color.LimeGreen;
-            this.ButtonAddAbonement.Location = new System.Drawing.Point(613, 181);
+            this.ButtonAddAbonement.Location = new System.Drawing.Point(613, 71);
             this.ButtonAddAbonement.Name = "ButtonAddAbonement";
             this.ButtonAddAbonement.Size = new System.Drawing.Size(117, 34);
             this.ButtonAddAbonement.TabIndex = 24;
@@ -146,7 +146,7 @@
             // ButtonEdit
             // 
             this.ButtonEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ButtonEdit.Location = new System.Drawing.Point(613, 74);
+            this.ButtonEdit.Location = new System.Drawing.Point(613, 181);
             this.ButtonEdit.Name = "ButtonEdit";
             this.ButtonEdit.Size = new System.Drawing.Size(117, 34);
             this.ButtonEdit.TabIndex = 26;

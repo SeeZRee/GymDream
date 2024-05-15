@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class UserForm
+    partial class WorkerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,41 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxLoginUser = new System.Windows.Forms.TextBox();
-            this.TextBoxEditIdUser = new System.Windows.Forms.TextBox();
+            this.TextBoxLoginWorker = new System.Windows.Forms.TextBox();
             this.ButtonAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ButtonEdit = new System.Windows.Forms.Button();
-            this.TextBoxPasswordUser = new System.Windows.Forms.TextBox();
-            this.TextBoxDeleteUser = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.TextBoxPasswordWorker = new System.Windows.Forms.TextBox();
+            this.TextBoxIdWorker = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Worker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TextBoxEditLogUser = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Date_Log = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Exit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ComboBoxPostForWorker = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // TextBoxLoginUser
+            // TextBoxLoginWorker
             // 
-            this.TextBoxLoginUser.Location = new System.Drawing.Point(102, 123);
-            this.TextBoxLoginUser.Name = "TextBoxLoginUser";
-            this.TextBoxLoginUser.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxLoginUser.TabIndex = 14;
-            // 
-            // TextBoxEditIdUser
-            // 
-            this.TextBoxEditIdUser.Location = new System.Drawing.Point(448, 176);
-            this.TextBoxEditIdUser.Name = "TextBoxEditIdUser";
-            this.TextBoxEditIdUser.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxEditIdUser.TabIndex = 19;
+            this.TextBoxLoginWorker.Location = new System.Drawing.Point(203, 125);
+            this.TextBoxLoginWorker.Name = "TextBoxLoginWorker";
+            this.TextBoxLoginWorker.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxLoginWorker.TabIndex = 14;
             // 
             // ButtonAdd
             // 
@@ -78,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 160);
+            this.label2.Location = new System.Drawing.Point(200, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 18;
@@ -98,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 107);
+            this.label1.Location = new System.Drawing.Point(200, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 17;
@@ -115,37 +107,28 @@
             this.ButtonEdit.UseVisualStyleBackColor = false;
             this.ButtonEdit.Click += new System.EventHandler(this.ButtonEditUser_Click);
             // 
-            // TextBoxPasswordUser
+            // TextBoxPasswordWorker
             // 
-            this.TextBoxPasswordUser.Location = new System.Drawing.Point(102, 176);
-            this.TextBoxPasswordUser.Name = "TextBoxPasswordUser";
-            this.TextBoxPasswordUser.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxPasswordUser.TabIndex = 13;
+            this.TextBoxPasswordWorker.Location = new System.Drawing.Point(203, 173);
+            this.TextBoxPasswordWorker.Name = "TextBoxPasswordWorker";
+            this.TextBoxPasswordWorker.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxPasswordWorker.TabIndex = 13;
             // 
-            // TextBoxDeleteUser
+            // TextBoxIdWorker
             // 
-            this.TextBoxDeleteUser.Location = new System.Drawing.Point(279, 176);
-            this.TextBoxDeleteUser.Name = "TextBoxDeleteUser";
-            this.TextBoxDeleteUser.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxDeleteUser.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(445, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Логин";
+            this.TextBoxIdWorker.Location = new System.Drawing.Point(27, 173);
+            this.TextBoxIdWorker.Name = "TextBoxIdWorker";
+            this.TextBoxIdWorker.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxIdWorker.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(276, 160);
+            this.label5.Location = new System.Drawing.Point(24, 157);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Id Пользователя";
+            this.label5.Text = "Id Сотрудника";
             // 
             // dataGridView1
             // 
@@ -156,11 +139,12 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_User,
+            this.Id_Worker,
             this.Login,
             this.Password,
             this.Id_Post,
-            this.Id_Client});
+            this.Date_Log,
+            this.Date_Exit});
             this.dataGridView1.Location = new System.Drawing.Point(9, 261);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(1);
             this.dataGridView1.Name = "dataGridView1";
@@ -168,12 +152,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(738, 249);
             this.dataGridView1.TabIndex = 23;
             // 
-            // Id_User
+            // Id_Worker
             // 
-            this.Id_User.DataPropertyName = "Id_User";
-            this.Id_User.HeaderText = "Id_User";
-            this.Id_User.Name = "Id_User";
-            this.Id_User.ReadOnly = true;
+            this.Id_Worker.DataPropertyName = "Id_Worker";
+            this.Id_Worker.HeaderText = "Id Сотрудника";
+            this.Id_Worker.Name = "Id_Worker";
+            this.Id_Worker.ReadOnly = true;
             // 
             // Login
             // 
@@ -196,53 +180,59 @@
             this.Id_Post.Name = "Id_Post";
             this.Id_Post.ReadOnly = true;
             // 
-            // Id_Client
+            // Date_Log
             // 
-            this.Id_Client.DataPropertyName = "Id_Client";
-            this.Id_Client.HeaderText = "Клиент";
-            this.Id_Client.Name = "Id_Client";
-            this.Id_Client.ReadOnly = true;
+            this.Date_Log.DataPropertyName = "Date_Log";
+            this.Date_Log.HeaderText = "Время входа ";
+            this.Date_Log.Name = "Date_Log";
+            this.Date_Log.ReadOnly = true;
             // 
-            // TextBoxEditLogUser
+            // Date_Exit
             // 
-            this.TextBoxEditLogUser.Location = new System.Drawing.Point(448, 123);
-            this.TextBoxEditLogUser.Name = "TextBoxEditLogUser";
-            this.TextBoxEditLogUser.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxEditLogUser.TabIndex = 16;
+            this.Date_Exit.DataPropertyName = "Date_Exit";
+            this.Date_Exit.HeaderText = "Время выхода";
+            this.Date_Exit.Name = "Date_Exit";
+            this.Date_Exit.ReadOnly = true;
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(445, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 13);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Id Пользователя";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(390, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Должность";
             // 
-            // UserForm
+            // ComboBoxPostForWorker
+            // 
+            this.ComboBoxPostForWorker.FormattingEnabled = true;
+            this.ComboBoxPostForWorker.Location = new System.Drawing.Point(393, 172);
+            this.ComboBoxPostForWorker.Name = "ComboBoxPostForWorker";
+            this.ComboBoxPostForWorker.Size = new System.Drawing.Size(117, 21);
+            this.ComboBoxPostForWorker.TabIndex = 40;
+            // 
+            // WorkerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 519);
+            this.Controls.Add(this.ComboBoxPostForWorker);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.TextBoxLoginUser);
-            this.Controls.Add(this.TextBoxEditIdUser);
+            this.Controls.Add(this.TextBoxLoginWorker);
             this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ButtonDelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonEdit);
-            this.Controls.Add(this.TextBoxEditLogUser);
-            this.Controls.Add(this.TextBoxPasswordUser);
-            this.Controls.Add(this.TextBoxDeleteUser);
+            this.Controls.Add(this.TextBoxPasswordWorker);
+            this.Controls.Add(this.TextBoxIdWorker);
             this.MaximumSize = new System.Drawing.Size(772, 558);
             this.MinimumSize = new System.Drawing.Size(772, 558);
-            this.Name = "UserForm";
+            this.Name = "WorkerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserForm";
+            this.Text = "WorkerForm";
             this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -252,24 +242,23 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBoxLoginUser;
-        private System.Windows.Forms.TextBox TextBoxEditIdUser;
+        private System.Windows.Forms.TextBox TextBoxLoginWorker;
         private System.Windows.Forms.Button ButtonAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ButtonEdit;
-        private System.Windows.Forms.TextBox TextBoxPasswordUser;
-        private System.Windows.Forms.TextBox TextBoxDeleteUser;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TextBoxPasswordWorker;
+        private System.Windows.Forms.TextBox TextBoxIdWorker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Worker;
         private System.Windows.Forms.DataGridViewTextBoxColumn Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Post;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Client;
-        private System.Windows.Forms.TextBox TextBoxEditLogUser;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Log;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Exit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox ComboBoxPostForWorker;
     }
 }

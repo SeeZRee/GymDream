@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Id_Trainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO_Trainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Oklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.TextBoxOkladTrainer = new System.Windows.Forms.TextBox();
             this.ButtonAdd = new System.Windows.Forms.Button();
@@ -38,9 +41,6 @@
             this.TextBoxFioTrainer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Id_Trainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO_Trainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Oklad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,27 @@
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(738, 249);
             this.dataGridView3.TabIndex = 37;
+            // 
+            // Id_Trainer
+            // 
+            this.Id_Trainer.DataPropertyName = "Id_Trainer";
+            this.Id_Trainer.HeaderText = "Id_Trainer";
+            this.Id_Trainer.Name = "Id_Trainer";
+            this.Id_Trainer.ReadOnly = true;
+            // 
+            // FIO_Trainer
+            // 
+            this.FIO_Trainer.DataPropertyName = "FIO_Trainer";
+            this.FIO_Trainer.HeaderText = "Фио тренера";
+            this.FIO_Trainer.Name = "FIO_Trainer";
+            this.FIO_Trainer.ReadOnly = true;
+            // 
+            // Oklad
+            // 
+            this.Oklad.DataPropertyName = "Oklad";
+            this.Oklad.HeaderText = "Оклад";
+            this.Oklad.Name = "Oklad";
+            this.Oklad.ReadOnly = true;
             // 
             // label3
             // 
@@ -143,27 +164,6 @@
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 39;
             this.label2.Text = "Фио тренера";
-            // 
-            // Id_Trainer
-            // 
-            this.Id_Trainer.DataPropertyName = "Id_Trainer";
-            this.Id_Trainer.HeaderText = "Id_Trainer";
-            this.Id_Trainer.Name = "Id_Trainer";
-            this.Id_Trainer.ReadOnly = true;
-            // 
-            // FIO_Trainer
-            // 
-            this.FIO_Trainer.DataPropertyName = "FIO_Trainer";
-            this.FIO_Trainer.HeaderText = "Фио тренера";
-            this.FIO_Trainer.Name = "FIO_Trainer";
-            this.FIO_Trainer.ReadOnly = true;
-            // 
-            // Oklad
-            // 
-            this.Oklad.DataPropertyName = "Oklad";
-            this.Oklad.HeaderText = "Оклад";
-            this.Oklad.Name = "Oklad";
-            this.Oklad.ReadOnly = true;
             // 
             // TrainerForm
             // 

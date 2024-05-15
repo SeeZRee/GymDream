@@ -73,6 +73,12 @@
     <Compile Include="DB.cs" />
     <Compile Include="LoginValidation.cs" />
     <Compile Include="PassValidation.cs" />
+    <Compile Include="PostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostForm.Designer.cs">
+      <DependentUpon>PostForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +91,11 @@
     <Compile Include="TrainerForm.Designer.cs">
       <DependentUpon>TrainerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForm.cs">
+    <Compile Include="WorkerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <Compile Include="WorkerForm.Designer.cs">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -111,14 +117,17 @@
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PostForm.resx">
+      <DependentUpon>PostForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainerForm.resx">
       <DependentUpon>TrainerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <EmbeddedResource Include="WorkerForm.resx">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

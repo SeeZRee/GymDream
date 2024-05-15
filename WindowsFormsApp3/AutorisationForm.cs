@@ -50,7 +50,7 @@ namespace WindowsFormsApp3
                 using (SqlConnection con = new SqlConnection(dbQeury.StringCon()))
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand($"SELECT * FROM [dbo].[User] WHERE Login ='{login}' and Password = '{password}'", con))
+                    using (SqlCommand command = new SqlCommand($"SELECT * FROM [dbo].[Worker] WHERE Login ='{login}' and Password = '{password}'", con))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

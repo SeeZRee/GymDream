@@ -31,9 +31,9 @@ namespace WindowsFormsApp3
             childForm.Show();
         }
 
-        private void UserButton_Click(object sender, EventArgs e)
+        private void WorkerButton_Click(object sender, EventArgs e)
         {
-            openForm(new UserForm());
+            openForm(new WorkerForm());
         }
 
         private void ClientButton_Click(object sender, EventArgs e)
@@ -49,6 +49,16 @@ namespace WindowsFormsApp3
         private void TrainerButton_Click(object sender, EventArgs e)
         {
             openForm(new TrainerForm());
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void PostButton_Click(object sender, EventArgs e)
+        {
+            openForm(new PostForm());
         }
     }
 }

@@ -30,27 +30,24 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TextBoxEditIdClient = new System.Windows.Forms.TextBox();
+            this.TextBoxFioClient = new System.Windows.Forms.TextBox();
             this.ButtonAddClient = new System.Windows.Forms.Button();
             this.ButtonDelete = new System.Windows.Forms.Button();
             this.ButtonEdit = new System.Windows.Forms.Button();
-            this.TextBoxEditNum = new System.Windows.Forms.TextBox();
+            this.TextBoxNumClient = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Abonement = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FIO_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Trainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Worker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ComboBoxAbonementsForClients = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ComboBoxTrainerForClients = new System.Windows.Forms.ComboBox();
-            this.TextBoxIdTrainerForSql = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Id_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Abonement = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIO_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Trainer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,12 +69,12 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Номер телефона";
             // 
-            // TextBoxEditIdClient
+            // TextBoxFioClient
             // 
-            this.TextBoxEditIdClient.Location = new System.Drawing.Point(316, 175);
-            this.TextBoxEditIdClient.Name = "TextBoxEditIdClient";
-            this.TextBoxEditIdClient.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxEditIdClient.TabIndex = 32;
+            this.TextBoxFioClient.Location = new System.Drawing.Point(316, 175);
+            this.TextBoxFioClient.Name = "TextBoxFioClient";
+            this.TextBoxFioClient.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxFioClient.TabIndex = 32;
             // 
             // ButtonAddClient
             // 
@@ -88,6 +85,7 @@
             this.ButtonAddClient.TabIndex = 23;
             this.ButtonAddClient.Text = "Добавить";
             this.ButtonAddClient.UseVisualStyleBackColor = false;
+            this.ButtonAddClient.Click += new System.EventHandler(this.button1_Click);
             // 
             // ButtonDelete
             // 
@@ -109,12 +107,12 @@
             this.ButtonEdit.Text = "Изменить";
             this.ButtonEdit.UseVisualStyleBackColor = false;
             // 
-            // TextBoxEditNum
+            // TextBoxNumClient
             // 
-            this.TextBoxEditNum.Location = new System.Drawing.Point(316, 127);
-            this.TextBoxEditNum.Name = "TextBoxEditNum";
-            this.TextBoxEditNum.Size = new System.Drawing.Size(117, 20);
-            this.TextBoxEditNum.TabIndex = 29;
+            this.TextBoxNumClient.Location = new System.Drawing.Point(316, 127);
+            this.TextBoxNumClient.Name = "TextBoxNumClient";
+            this.TextBoxNumClient.Size = new System.Drawing.Size(117, 20);
+            this.TextBoxNumClient.TabIndex = 29;
             // 
             // dataGridView3
             // 
@@ -130,7 +128,7 @@
             this.Phone_Number,
             this.FIO_Client,
             this.Id_Trainer,
-            this.Id_User});
+            this.Id_Worker});
             this.dataGridView3.Location = new System.Drawing.Point(9, 261);
             this.dataGridView3.MaximumSize = new System.Drawing.Size(738, 249);
             this.dataGridView3.MinimumSize = new System.Drawing.Size(738, 249);
@@ -138,6 +136,48 @@
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(738, 249);
             this.dataGridView3.TabIndex = 36;
+            // 
+            // Id_Client
+            // 
+            this.Id_Client.DataPropertyName = "Id_Client";
+            this.Id_Client.HeaderText = "Id_Client";
+            this.Id_Client.Name = "Id_Client";
+            this.Id_Client.ReadOnly = true;
+            // 
+            // Id_Abonement
+            // 
+            this.Id_Abonement.DataPropertyName = "Id_Abonement";
+            this.Id_Abonement.HeaderText = "Id_Abonement";
+            this.Id_Abonement.Name = "Id_Abonement";
+            this.Id_Abonement.ReadOnly = true;
+            // 
+            // Phone_Number
+            // 
+            this.Phone_Number.DataPropertyName = "Phone_Number";
+            this.Phone_Number.HeaderText = "Номер телефона";
+            this.Phone_Number.Name = "Phone_Number";
+            this.Phone_Number.ReadOnly = true;
+            // 
+            // FIO_Client
+            // 
+            this.FIO_Client.DataPropertyName = "FIO_Client";
+            this.FIO_Client.HeaderText = "Фио клиента";
+            this.FIO_Client.Name = "FIO_Client";
+            this.FIO_Client.ReadOnly = true;
+            // 
+            // Id_Trainer
+            // 
+            this.Id_Trainer.DataPropertyName = "Id_Trainer";
+            this.Id_Trainer.HeaderText = "Id_Trainer";
+            this.Id_Trainer.Name = "Id_Trainer";
+            this.Id_Trainer.ReadOnly = true;
+            // 
+            // Id_Worker
+            // 
+            this.Id_Worker.DataPropertyName = "Id_Worker";
+            this.Id_Worker.HeaderText = "Id_Worker";
+            this.Id_Worker.Name = "Id_Worker";
+            this.Id_Worker.ReadOnly = true;
             // 
             // label1
             // 
@@ -189,83 +229,11 @@
             this.ComboBoxTrainerForClients.Size = new System.Drawing.Size(117, 21);
             this.ComboBoxTrainerForClients.TabIndex = 41;
             // 
-            // TextBoxIdTrainerForSql
-            // 
-            this.TextBoxIdTrainerForSql.Location = new System.Drawing.Point(174, 61);
-            this.TextBoxIdTrainerForSql.Name = "TextBoxIdTrainerForSql";
-            this.TextBoxIdTrainerForSql.Size = new System.Drawing.Size(407, 20);
-            this.TextBoxIdTrainerForSql.TabIndex = 43;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Id Тренера";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Location = new System.Drawing.Point(609, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 34);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Узнать ID тренера";
-            this.button1.UseVisualStyleBackColor = false;
-            /*this.button1.Click += new System.EventHandler(this.button1_Click_1);*/
-            // 
-            // Id_Client
-            // 
-            this.Id_Client.DataPropertyName = "Id_Client";
-            this.Id_Client.HeaderText = "Id_Client";
-            this.Id_Client.Name = "Id_Client";
-            this.Id_Client.ReadOnly = true;
-            // 
-            // Id_Abonement
-            // 
-            this.Id_Abonement.DataPropertyName = "Id_Abonement";
-            this.Id_Abonement.HeaderText = "Id_Abonement";
-            this.Id_Abonement.Name = "Id_Abonement";
-            this.Id_Abonement.ReadOnly = true;
-            // 
-            // Phone_Number
-            // 
-            this.Phone_Number.DataPropertyName = "Phone_Number";
-            this.Phone_Number.HeaderText = "Номер телефона";
-            this.Phone_Number.Name = "Phone_Number";
-            this.Phone_Number.ReadOnly = true;
-            // 
-            // FIO_Client
-            // 
-            this.FIO_Client.DataPropertyName = "FIO_Client";
-            this.FIO_Client.HeaderText = "Фио клиента";
-            this.FIO_Client.Name = "FIO_Client";
-            this.FIO_Client.ReadOnly = true;
-            // 
-            // Id_Trainer
-            // 
-            this.Id_Trainer.DataPropertyName = "Id_Trainer";
-            this.Id_Trainer.HeaderText = "Id_Trainer";
-            this.Id_Trainer.Name = "Id_Trainer";
-            this.Id_Trainer.ReadOnly = true;
-            // 
-            // Id_User
-            // 
-            this.Id_User.DataPropertyName = "Id_User";
-            this.Id_User.HeaderText = "Id_User";
-            this.Id_User.Name = "Id_User";
-            this.Id_User.ReadOnly = true;
-            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 519);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.TextBoxIdTrainerForSql);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ComboBoxTrainerForClients);
             this.Controls.Add(this.label2);
@@ -275,11 +243,11 @@
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TextBoxEditIdClient);
+            this.Controls.Add(this.TextBoxFioClient);
             this.Controls.Add(this.ButtonAddClient);
             this.Controls.Add(this.ButtonDelete);
             this.Controls.Add(this.ButtonEdit);
-            this.Controls.Add(this.TextBoxEditNum);
+            this.Controls.Add(this.TextBoxNumClient);
             this.MaximumSize = new System.Drawing.Size(772, 558);
             this.MinimumSize = new System.Drawing.Size(772, 558);
             this.Name = "ClientForm";
@@ -295,11 +263,11 @@
         #endregion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TextBoxEditIdClient;
+        private System.Windows.Forms.TextBox TextBoxFioClient;
         private System.Windows.Forms.Button ButtonAddClient;
         private System.Windows.Forms.Button ButtonDelete;
         private System.Windows.Forms.Button ButtonEdit;
-        private System.Windows.Forms.TextBox TextBoxEditNum;
+        private System.Windows.Forms.TextBox TextBoxNumClient;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
@@ -307,14 +275,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox ComboBoxTrainerForClients;
-        private System.Windows.Forms.TextBox TextBoxIdTrainerForSql;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Abonement;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Trainer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Worker;
     }
 }
